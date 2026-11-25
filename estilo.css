@@ -1,0 +1,63 @@
+@font-face{font-family:Manrope;src:url("assets/fontes/manrope.woff") format("woff");font-style:normal;font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("assets/fontes/source-serif-4.woff") format("woff");font-style:normal;font-weight:200 900;font-display:swap}
+:root{--palha:#f5efe3;--tinta:#302536;--argila:#aa422c;--fibra:#ddc7a8;--texto:#4c4249;--linha:#cfc2b2;--serif:"Source Serif 4",Georgia,serif;--sans:Manrope,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--tinta);background:var(--palha);font-family:var(--sans);font-weight:490;line-height:1.55}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.23em}
+a:focus-visible{outline:3px solid var(--argila);outline-offset:6px}
+.skip{position:absolute;top:8px;left:8px;z-index:90;background:white;padding:.6rem 1rem;transform:translateY(-160%)}
+.skip:focus{transform:none}
+.limite{width:min(1280px,90%);margin:0 auto}
+.barra{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:32px;border-bottom:1px solid var(--linha)}
+.marca{display:inline-block;flex-shrink:0}
+.marca img{width:222px}
+nav{display:flex;align-items:center;gap:clamp(16px,2.4vw,38px);font-size:.91rem;font-weight:640}
+nav a,.rodape a{text-decoration:none}
+nav a:hover,.rodape a:hover{text-decoration:underline}
+.documento{border-left:1px solid var(--linha);padding-left:clamp(14px,2.4vw,32px);display:inline-flex;align-items:center;gap:.45em}
+.pdf{font-size:.68rem;letter-spacing:.04em;border:1px solid #877b78;padding:.02em .34em;border-radius:2px}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.98fr);align-items:center;gap:3%;padding:clamp(44px,5.4vw,83px) 0 clamp(46px,5.6vw,90px)}
+.chamada{position:relative;z-index:1}
+.descritor{font-size:clamp(.82rem,1.13vw,1rem);font-weight:690;color:var(--argila);margin:0 0 1.3rem}
+h1,h2{font-family:var(--serif);font-weight:475;letter-spacing:-.053em;line-height:1.01;margin:0;text-wrap:balance}
+h1{font-size:clamp(3.35rem,5.5vw,5.75rem);max-width:11.8ch}
+.lide{font-size:clamp(1rem,1.33vw,1.18rem);max-width:44ch;margin:1.55rem 0 1.75rem;color:var(--texto)}
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:.84em 1.12em;background:var(--argila);color:#fff;text-decoration:none;font-weight:650;font-size:.93rem;border-radius:3px}
+.botao:hover{background:#863622}
+.paisagem{margin:0;display:grid;align-items:center;justify-items:center}
+.paisagem img{width:100%;height:auto}
+.frentes{background:#fcfaf6;border-top:1px solid var(--linha);scroll-margin-top:16px;padding:clamp(52px,6vw,96px) 0}
+.grade{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(42px,7vw,140px)}
+h2{font-size:clamp(2.7rem,4.2vw,4.3rem)}
+.introducao>p{max-width:31ch;font-size:1.05rem;margin:1.15rem 0 0;color:var(--texto)}
+.temas article+article{border-top:1px solid var(--linha);margin-top:30px;padding-top:28px}
+h3{margin:0 0 .55em;font:650 clamp(1.3rem,2vw,1.75rem)/1.2 var(--sans);letter-spacing:-.042em}
+.temas p,.parceria p{font-size:clamp(1rem,1.22vw,1.11rem);line-height:1.65;margin:0;max-width:63ch}
+.temas p{color:var(--texto)}
+.parceria{background:var(--tinta);color:var(--palha);padding:clamp(56px,6.5vw,100px) 0;scroll-margin-top:16px}
+.parceria-grade{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.75fr);align-items:center;gap:clamp(50px,10vw,160px)}
+.parceria p{margin-top:1rem;color:#ece1d1}
+.link-claro{border-top:1px solid #a99aa6;border-bottom:1px solid #a99aa6;display:block;position:relative;padding:1rem 45px 1rem 0;text-decoration:none;font-weight:650;font-size:1rem}
+.link-claro span{display:block;margin-top:.28em;font-size:.86rem;font-weight:460;color:var(--fibra)}
+.link-claro svg{position:absolute;right:2px;top:calc(50% - 14px)}
+.link-claro:hover{text-decoration:underline}
+.parceria a:focus-visible{outline-color:var(--fibra)}
+.rodape{min-height:102px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:.86rem;font-weight:650}
+.rodape img{width:154px}
+.rodape span{margin-left:6px}
+@media(max-width:800px){
+ .barra{min-height:76px;gap:14px}.marca img{width:171px}nav{font-size:.82rem;gap:15px}
+ .documento{padding-left:12px}.capa{gap:1%}h1{font-size:clamp(2.85rem,6.5vw,4.1rem)}.grade,.parceria-grade{gap:38px}
+}
+@media(max-width:660px){
+ .limite{width:88%}.barra{min-height:0;align-items:flex-start;flex-direction:column;padding:22px 0 15px;gap:18px}
+ .marca img{width:186px}nav{width:100%;justify-content:space-between;gap:6px;font-size:.8rem}.documento{border:0;padding:0}
+ .capa{grid-template-columns:1fr;padding:36px 0 20px;gap:0}.descritor{font-size:.8rem;margin-bottom:1rem}h1{font-size:clamp(2.85rem,11.7vw,4.4rem);max-width:12.3ch}
+ .lide{margin:1.2rem 0 1.32rem}.paisagem{max-width:420px;width:100%;margin:14px auto 0}
+ .grade,.parceria-grade{grid-template-columns:1fr;gap:30px}.introducao br{display:none}.introducao p{max-width:44ch}.frentes,.parceria{padding:46px 0}
+ .rodape{min-height:78px}.rodape img{width:126px}.rodape a{font-size:.77rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.skip,nav,.botao,.link-claro,.rodape a{display:none}.limite{width:92%}.barra,.rodape{min-height:52px}.capa,.parceria,.frentes{padding:24px 0}.parceria{background:white;color:#222}.parceria p{color:#222}h1{font-size:34pt}h2{font-size:23pt}.rodape{margin-top:10px}}
