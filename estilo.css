@@ -39,6 +39,7 @@ h3{margin:0 0 .55em;font:650 clamp(1.3rem,2vw,1.75rem)/1.2 var(--sans);letter-sp
 .parceria{background:var(--tinta);color:var(--palha);padding:clamp(56px,6.5vw,100px) 0;scroll-margin-top:16px}
 .parceria-grade{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.75fr);align-items:center;gap:clamp(50px,10vw,160px)}
 .parceria p{margin-top:1rem;color:#ece1d1}
+.email-contato{display:block;width:fit-content;max-width:100%;min-height:44px;padding:.55em 0;overflow-wrap:anywhere;font-weight:650}
 .link-claro{border-top:1px solid #a99aa6;border-bottom:1px solid #a99aa6;display:block;position:relative;padding:1rem 45px 1rem 0;text-decoration:none;font-weight:650;font-size:1rem}
 .link-claro span{display:block;margin-top:.28em;font-size:.86rem;font-weight:460;color:var(--fibra)}
 .link-claro svg{position:absolute;right:2px;top:calc(50% - 14px)}
