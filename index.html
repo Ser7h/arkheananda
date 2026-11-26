@@ -3,70 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5efe3">
+  <meta name="theme-color" content="#f8f5ee">
   <title>ArkheAnanda | Bioeconomia Circular e Agricultura Regenerativa</title>
-  <meta name="description" content="A ArkheAnanda formula projetos de pesquisa aplicada sobre o destino de resíduos do agronegócio e o manejo regenerativo do solo. Conheça as frentes de trabalho.">
+  <meta name="description" content="A ArkheAnanda formula pesquisas sobre a destinação de resíduos agrícolas e o manejo regenerativo do solo. Conheça os estudos e proponha uma parceria.">
+  <link rel="canonical" href="https://arkheananda.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="ArkheAnanda">
-  <meta property="og:title" content="ArkheAnanda | Bioeconomia Circular e Agricultura Regenerativa">
-  <meta property="og:description" content="Pesquisa aplicada sobre o destino dos materiais e o manejo do solo, a partir das condições de cada lote e de cada área.">
+  <meta property="og:title" content="ArkheAnanda | Resíduos agrícolas e manejo do solo">
+  <meta property="og:description" content="Pesquisa aplicada ao destino de um lote e às decisões de manejo de um talhão.">
+  <meta property="og:url" content="https://arkheananda.com.br/">
+  <meta property="og:image" content="https://arkheananda.com.br/assets/arkheananda-compartilhar.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ArkheAnanda. Resíduos agrícolas. Manejo do solo. Paisagem ilustrativa de cultivo em curvas de nível.">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/simbolo.svg">
   <link rel="preload" href="assets/fontes/source-serif-4.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="estilo.css">
+  <script src="navegacao.js" defer></script>
 </head>
 <body id="inicio">
-  <a class="skip" href="#principal">Pular para o conteúdo</a>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icones" aria-hidden="true" focusable="false">
+    <symbol id="seta" viewBox="0 0 24 24"><path d="M4.5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="seta-diagonal" viewBox="0 0 24 24"><path d="M5 19 18 6M6 6h12v12"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3.5v11m-4.5-4.5 4.5 4.5 4.5-4.5M4.5 16v4h15v-4"/></symbol>
+    <symbol id="subir" viewBox="0 0 24 24"><path d="M12 20V4.5m-6 6 6-6 6 6"/></symbol>
+  </svg>
   <header class="cabecalho">
     <div class="limite barra">
-      <a class="marca" href="#inicio" aria-label="ArkheAnanda, início"><img src="assets/marca.svg" width="596" height="85" alt="ArkheAnanda"></a>
-      <nav aria-label="Navegação principal">
+      <a class="marca" href="#inicio" aria-label="ArkheAnanda, página inicial">
+        <img src="assets/marca.svg" width="597" height="85" alt="ArkheAnanda">
+      </a>
+      <button type="button" class="abrir-menu" aria-controls="navegacao" aria-expanded="false" hidden>
+        <span>Menu</span><span class="tracos" aria-hidden="true"></span>
+      </button>
+      <nav id="navegacao" class="navegacao" aria-label="Navegação principal">
         <a href="#atuacao">Atuação</a>
-        <a href="#pesquisa">Pesquisa e contato</a>
-        <a class="documento" href="apresentacao-arkheananda.pdf">Apresentação <span class="pdf">PDF</span></a>
+        <a href="#metodo">Como trabalhamos</a>
+        <a class="contato-nav" href="#pesquisa">Contato <svg class="icone" aria-hidden="true"><use href="#seta"/></svg></a>
       </nav>
     </div>
   </header>
-  <main id="principal">
-    <section class="abertura" aria-labelledby="titulo">
-      <div class="limite capa">
-        <div class="chamada">
-          <p class="descritor">Bioeconomia Circular e Agricultura Regenerativa</p>
-          <h1 id="titulo">Da origem do material ao manejo do solo.</h1>
-          <p class="lide">A ArkheAnanda formula projetos de pesquisa aplicada a partir de duas decisões do campo. Que destino dar a um resíduo? De que manejo o solo precisa?</p>
-          <a class="botao" href="#atuacao">Conheça nossa atuação <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        <figure class="paisagem" aria-label="Gravura de um talhão com sulcos curvos e camadas do solo"><img src="assets/relevo.svg" width="600" height="540" alt=""></figure>
-      </div>
-    </section>
-    <section id="atuacao" class="frentes" aria-labelledby="titulo-frentes">
-      <div class="limite grade">
-        <div class="introducao"><h2 id="titulo-frentes">Frentes de<br> trabalho</h2>
-          <p>O ponto de partida é uma pergunta sobre um lote ou uma área de produção.</p></div>
-        <div class="temas">
-          <article>
-            <h3>Carbono Circular</h3>
-            <p>Quando sobra um lote de sementes tratadas, o gerador precisa saber que destino pode dar ao material e como comprovar o que foi feito. O estudo considera a origem do lote, o tratamento aplicado e as condições de recebimento em cada rota.</p>
-          </article>
-          <article>
-            <h3>Manejo regenerativo do solo</h3>
-            <p>Quando uma fazenda avalia usar um composto, a investigação começa pela área. A cultura, o histórico de manejo e a composição do material orientam o desenho de um ensaio e a escolha do que medir no solo e na planta.</p>
-          </article>
+  <main id="principal" tabindex="-1">
+    <section class="capa" aria-labelledby="titulo">
+      <picture class="capa-imagem">
+        <source media="(max-width: 600px)" srcset="assets/curvas-de-nivel-vertical.webp">
+        <img src="assets/curvas-de-nivel.webp" srcset="assets/curvas-de-nivel-900.webp 900w, assets/curvas-de-nivel.webp 1920w" sizes="100vw" width="1920" height="768" fetchpriority="high" alt="">
+      </picture>
+      <div class="limite capa-conteudo">
+        <p class="rubrica clara">Bioeconomia Circular e Agricultura Regenerativa</p>
+        <h1 id="titulo">Resíduos agrícolas.<br>Manejo do solo.</h1>
+        <p class="abertura">A ArkheAnanda desenha estudos para quem precisa dar destino a um lote de resíduos ou avaliar uma nova prática no talhão.</p>
+        <div class="acoes">
+          <a class="botao" href="#atuacao">Ver frentes de pesquisa <svg class="icone" aria-hidden="true"><use href="#seta"/></svg></a>
+          <a class="link-capa" href="apresentacao-arkheananda.pdf">Apresentação em PDF <svg class="icone" aria-hidden="true"><use href="#seta-diagonal"/></svg></a>
         </div>
       </div>
     </section>
-    <section id="pesquisa" class="parceria" aria-labelledby="titulo-pesquisa">
-      <div class="limite parceria-grade">
-        <div><h2 id="titulo-pesquisa">Pesquisa em parceria</h2>
-          <p>Produtores, cooperativas, agroindústrias e equipes de pesquisa trazem partes diferentes da mesma questão. Cada projeto define a pergunta, as competências necessárias e a evidência que permitirá decidir o próximo passo.</p>
-          <p>Para conversar sobre um lote, uma área ou uma parceria de pesquisa, escreva para
-            <a class="email-contato" href="mailto:contato@arkheananda.com.br">contato@arkheananda.com.br</a>
-          </p>
+    <section id="atuacao" class="atuacao secao" aria-labelledby="titulo-atuacao">
+      <div class="limite">
+        <div class="abertura-secao">
+          <div>
+            <p class="rubrica">Atuação</p>
+            <h2 id="titulo-atuacao">Frentes de pesquisa</h2>
+          </div>
+          <p class="introducao">O lote é o ponto de partida para estudar a destinação de um resíduo. O talhão é a referência para avaliar uma mudança de manejo.</p>
         </div>
-        <a class="link-claro" href="apresentacao-arkheananda.pdf" download>Baixar apresentação institucional <span>PDF de uma página</span><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v4h14v-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="frentes">
+          <article class="frente">
+            <img class="fotografia sementes" src="assets/amostra-de-soja.webp" srcset="assets/amostra-de-soja-600.webp 600w, assets/amostra-de-soja.webp 1200w" sizes="(max-width: 720px) 90vw, (max-width: 1450px) 43vw, 625px" width="1200" height="800" loading="lazy" decoding="async" alt="Ilustração de uma amostra de sementes de soja tratadas sobre uma bancada.">
+            <div class="frente-texto">
+              <p class="tema">Carbono Circular</p>
+              <h3>Destinação de resíduos</h3>
+              <p>Quando sobra um lote de sementes tratadas, a sementeira precisa identificar quem pode recebê-lo e como documentar o destino. O estudo parte da origem e do tratamento daquele lote.</p>
+              <details>
+                <summary>O que entra na análise <span class="mais" aria-hidden="true"></span></summary>
+                <ul>
+                  <li>Identificação do lote e dos produtos aplicados às sementes.</li>
+                  <li>Condições de recebimento em cada rota considerada.</li>
+                  <li>Documentação necessária para acompanhar o encaminhamento.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="frente">
+            <img class="fotografia solo" src="assets/perfil-de-solo.webp" srcset="assets/perfil-de-solo-600.webp 600w, assets/perfil-de-solo.webp 1200w" sizes="(max-width: 720px) 90vw, (max-width: 1450px) 43vw, 625px" width="1200" height="800" loading="lazy" decoding="async" alt="Ilustração de um perfil de solo avermelhado com raízes finas de gramínea.">
+            <div class="frente-texto">
+              <p class="tema">Agricultura regenerativa</p>
+              <h3>Manejo do solo</h3>
+              <p>Antes de ampliar o uso de um composto, o produtor precisa saber como avaliar seu efeito. O histórico do talhão, a cultura e a composição do material orientam o desenho do ensaio.</p>
+              <details>
+                <summary>O que entra no ensaio <span class="mais" aria-hidden="true"></span></summary>
+                <ul>
+                  <li>A prática que o produtor quer testar e o manejo que já adota.</li>
+                  <li>A área de comparação e as características do composto.</li>
+                  <li>As observações no solo e na planta que ajudarão a decidir sobre o uso.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="metodo" class="metodo secao" aria-labelledby="titulo-metodo">
+      <div class="limite grade-metodo">
+        <div class="metodo-titulo">
+          <p class="rubrica">Como trabalhamos</p>
+          <h2 id="titulo-metodo">O desenho<br>de um estudo</h2>
+          <img class="gravura" src="assets/relevo.svg" alt="" width="600" height="540" loading="lazy" decoding="async">
+        </div>
+        <ol class="etapas">
+          <li><h3>Definir a pergunta</h3><p>Que decisão o estudo precisa orientar? O produtor, a cooperativa ou a agroindústria traz a questão e o histórico do material ou da área.</p></li>
+          <li><h3>Escolher a comparação</h3><p>Para um lote, comparamos alternativas de destinação. Para uma prática de manejo, definimos com a equipe de campo o que será testado e em que área.</p></li>
+          <li><h3>Combinar o que registrar</h3><p>Os parceiros definem quem acompanha o estudo e quais documentos, análises ou observações serão necessários para interpretar o resultado.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section id="pesquisa" class="contato" aria-labelledby="titulo-contato">
+      <div class="limite contato-conteudo">
+        <p class="rubrica clara">Pesquisa em parceria</p>
+        <h2 id="titulo-contato">Qual decisão você<br>precisa tomar?</h2>
+        <p>Conte qual material sobrou, o que gostaria de testar na área ou que pergunta sua equipe quer investigar.</p>
+        <a class="email" href="mailto:contato@arkheananda.com.br">contato@arkheananda.com.br <svg class="icone" aria-hidden="true"><use href="#seta-diagonal"/></svg></a>
       </div>
     </section>
   </main>
-  <footer><div class="limite rodape"><img src="assets/marca.svg" width="596" height="85" alt="ArkheAnanda"><a href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
+  <footer>
+    <div class="limite rodape">
+      <div class="rodape-marca"><img src="assets/marca.svg" width="597" height="85" alt="ArkheAnanda"><p>Bioeconomia Circular e Agricultura Regenerativa</p></div>
+      <div class="rodape-acoes">
+        <a href="apresentacao-arkheananda.pdf" download>Baixar apresentação <span>PDF</span><svg class="icone" aria-hidden="true"><use href="#download"/></svg></a>
+        <a href="#inicio">Voltar ao início <svg class="icone" aria-hidden="true"><use href="#subir"/></svg></a>
+      </div>
+    </div>
+    <div class="limite credito">Imagens ilustrativas criadas para a ArkheAnanda.</div>
+  </footer>
 </body>
 </html>
