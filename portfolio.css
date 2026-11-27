@@ -7,7 +7,7 @@
 .cabeca-catalogo { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(12rem, .75fr); gap: 2.2rem; align-items: center; padding-block: clamp(3rem, 5.5vw, 6rem); }
 .cabeca-catalogo h1 { font-size: clamp(3.1rem, 6.8vw, 7rem); line-height: 1; margin: .23em 0; }
 .lead-catalogo { max-width: 43ch; font-size: clamp(1.08rem, 1.7vw, 1.48rem); color: var(--texto); }
-.capa-gravura { width: min(100%, 17rem); justify-self: end; max-height: 16rem; object-fit: contain; mix-blend-mode: multiply; }
+.capa-caderno { width: min(100%, 34vw, 26.25rem); justify-self: end; mix-blend-mode: multiply; }
 .sumario { color: var(--palha); background: var(--tinta); }
 .sumario-grade, .folio-grade { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); column-gap: clamp(2rem, 8vw, 9rem); }
 .sumario-grade { padding-block: clamp(2.4rem, 4.2vw, 5rem); align-items: start; }
@@ -53,7 +53,7 @@
   .catalogo-barra nav a { font-size: .8rem; }
   .pdf-nav { padding-inline: .5rem; }
   .cabeca-catalogo { grid-template-columns: 1fr; gap: 1rem; }
-  .capa-gravura { display: none; }
+  .capa-caderno { width: min(78vw, 20rem); justify-self: center; margin-top: .5rem; }
   .sumario-grade, .folio-grade { grid-template-columns: 1fr; gap: 1.25rem; }
   .folio .folio-titulo { position: static; }
   .folio h2 { max-width: none; }
@@ -79,10 +79,10 @@
   .catalogo-barra nav, .catalogo .pular, .indice-voltar, .catalogo-rodape, .sumario .falar { display: none; }
   .catalogo h1, .catalogo h2, .catalogo h3, .catalogo a, .catalogo p, .catalogo .rubrica, .catalogo .estagio, .catalogo strong { color: #191919; }
   .rubrica::before { background: #424242; }
-  .cabeca-catalogo { display: grid; grid-template-columns: 1fr 44mm; gap: 4mm; align-items: center; padding-block: 15mm 10mm; }
+  .cabeca-catalogo { display: grid; grid-template-columns: 1fr 54mm; gap: 4mm; align-items: center; padding-block: 15mm 10mm; }
   .cabeca-catalogo h1 { font-size: 38pt; }
   .lead-catalogo { font-size: 12pt; }
-  .capa-gravura { display: block; width: 42mm; filter: grayscale(1); }
+  .capa-caderno { width: 54mm; justify-self: end; margin: 0; filter: grayscale(1); }
   .sumario, .produtos, .contato-final { color: black; background: white; }
   .sumario-grade { display: block; padding-block: 5mm 0; border-top: 1px solid #777; }
   .sumario-intro h2 { font-size: 20pt; }

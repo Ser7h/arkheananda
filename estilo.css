@@ -100,8 +100,7 @@ details li { padding: .16rem 0 .16rem .15rem; }
 details li::marker { color: var(--argila); }
 .metodo { background: #eee7d9; border-block: 1px solid #e2d8c8; }
 .grade-metodo { display: grid; grid-template-columns: .83fr 1fr; align-items: start; gap: clamp(2rem, 8vw, 11rem); }
-.metodo-titulo { position: relative; }
-.gravura { width: clamp(9rem, 14vw, 15rem); margin: 1.3rem 0 -.6rem; mix-blend-mode: multiply; }
+.metodo-caderno { width: min(100%, 29vw, 22.5rem); margin-top: 1.5rem; mix-blend-mode: multiply; }
 .etapas { list-style: none; margin: 0; padding: 0; counter-reset: etapa; }
 .etapas li { position: relative; padding: 1.15rem 0 1.35rem clamp(2.75rem, 4.3vw, 5rem); border-top: 1px solid #beb29f; counter-increment: etapa; }
 .etapas li:last-child { border-bottom: 1px solid #beb29f; }
@@ -151,9 +150,8 @@ footer { padding-block: clamp(2rem, 3.6vw, 3.8rem) 1.5rem; }
   .fotografia { aspect-ratio: 1.8; }
   .frente-texto { padding-top: 1.2rem; }
   .grade-metodo { gap: 1.6rem; }
-  .metodo-titulo { min-height: 5.5rem; padding-right: 26%; }
   .metodo h2 { font-size: clamp(2.55rem, 7vw, 3.4rem); }
-  .gravura { position: absolute; right: 0; top: 50%; transform: translateY(-50%); margin: 0; width: 24%; max-width: 8rem; }
+  .metodo-caderno { width: min(75vw, 18rem); margin-top: 1.2rem; }
   .contato::after { right: -42%; width: 87%; opacity: .14; }
   .rodape { flex-wrap: wrap; gap: 1.1rem; }
   .rodape-acoes { column-gap: 1.6rem; }
