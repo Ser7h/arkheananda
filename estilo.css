@@ -137,6 +137,9 @@ details li::marker { color: var(--argila); }
 .links-rodape a, .canal-rodape { display: inline-flex; align-items: center; min-height: 44px; font-size: .91rem; font-weight: 650; }
 .links-rodape a { text-decoration: none; }
 .links-rodape a:hover, .assinatura-rodape:hover span { text-decoration: underline; text-underline-offset: .3em; }
+.canais-rodape { display: grid; justify-items: start; }
+.whatsapp-rodape { display: inline-flex; align-items: center; min-height: 44px; gap: .45rem; color: var(--tinta); font-size: .94rem; font-weight: 740; text-decoration: none; }
+.whatsapp-rodape:hover { text-decoration: underline; color: var(--argila); }
 .canal-rodape { justify-self: start; text-decoration-color: #b1836a; text-underline-offset: .34em; }
 .canal-rodape:hover { color: var(--argila); text-decoration-color: currentColor; }
 @media (max-width: 900px) {

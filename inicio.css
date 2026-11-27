@@ -52,8 +52,8 @@
 .convite-campo { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2.2rem,8vw,9rem); align-items: center; }
 .convite-campo h2 { margin: 0; font-size: clamp(3rem,5.4vw,5.5rem); }
 .convite-campo p { max-width: 44ch; color: #f2e8da; }
-.convite-email { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; margin-top: .85rem; font-weight: 675; text-decoration-color: #d2ad90; }
-.convite-email .icone { width: 1rem; }
+.convite-whatsapp { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; margin-top: .85rem; font-weight: 675; text-decoration-color: #d2ad90; }
+.convite-whatsapp .icone { width: 1rem; }
 @media (min-width: 761px) and (max-width: 1050px) {
   .capa-conteudo { grid-template-columns: 1.45fr 1fr; gap: 1.6rem; }
   .capa h1 { font-size: 5.1vw; }
