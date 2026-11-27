@@ -1,16 +1,16 @@
-/* A abertura deixa a paisagem respirar antes da leitura. */
 .capa { align-items: end; min-height: clamp(33rem, 42vw, 48rem); }
 .capa::after { background: linear-gradient(0deg, #171811ed, #1b1b1260 51%, transparent 88%), linear-gradient(95deg, #15191030, transparent 72%); }
 .capa-conteudo { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(0,.85fr); align-items: end; gap: clamp(2rem, 5vw, 6rem); padding-block: 7rem clamp(2.7rem, 4.35vw, 5rem); }
 .capa h1 { margin: 0; font-size: clamp(3rem, 5.23vw, 5.45rem); line-height: 1.02; }
+.area-da-marca { margin-bottom: 1rem; max-width: 40ch; font-size: clamp(.82rem,1vw,1rem); color: #f9e9cd; letter-spacing: .015em; font-weight: 620; }
 .capa .abertura { max-width: 40ch; margin: 0; font-size: clamp(.99rem, 1.15vw, 1.16rem); line-height: 1.55; }
 .capa .acoes { margin-top: 1.15rem; gap: .5rem 1.4rem; }
 .atuacao.secao { padding-block: clamp(3.4rem,5.7vw,6.2rem); }
 .abertura-atuacao { display: grid; grid-template-columns: 1.37fr 1fr; gap: 2.2rem; align-items: end; margin-bottom: clamp(1.6rem,2.7vw,3rem); }
 .abertura-atuacao h2 { font-size: clamp(2.8rem,4.9vw,5.15rem); }
-.abertura-atuacao p, .frente-amostra p, .texto-frente p { color: var(--texto); }
-.abertura-atuacao p { max-width: 41ch; margin: 0; line-height: 1.6; }
-.abertura-atuacao p a { text-decoration-color: var(--argila); text-decoration-thickness: 1px; }
+.frente-amostra p, .texto-frente p { color: var(--texto); }
+.download-servicos { display: inline-flex; min-height: 44px; gap: .65rem; align-items: center; justify-self: end; font-size: .92rem; font-weight: 650; text-decoration-color: var(--argila); text-decoration-thickness: 1px; }
+.download-servicos .icone { width: 1rem; color: var(--argila); }
 .panorama, .dupla-frentes { display: grid; grid-template-columns: minmax(0,1.37fr) minmax(0,1fr); gap: clamp(1.6rem,3vw,3.4rem); }
 .panorama a, .dupla-frentes a { text-decoration: none; }
 .panorama a:hover h3, .dupla-frentes a:hover h3, .panorama a:focus-visible h3, .dupla-frentes a:focus-visible h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .16em; }
@@ -28,9 +28,9 @@
 .frente-amostra .icone { width: 1rem; height: 1rem; color: var(--argila); }
 .frente-amostra h3, .texto-frente h3 { font-size: clamp(1.65rem,2.25vw,2.65rem); line-height: 1.08; }
 .frente-amostra p, .texto-frente p { margin-top: .58rem; font-size: .95rem; line-height: 1.53; }
-.dupla-frentes { margin-top: clamp(2rem,3.7vw,4rem); }
+.dupla-frentes { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: clamp(2rem,3.7vw,4rem); }
 .frente-foto { display: grid; grid-template-columns: 1fr auto; align-content: start; align-items: start; column-gap: 1rem; }
-.frente-foto > img { grid-column: 1 / -1; width: 100%; height: clamp(13rem,18vw,20rem); object-fit: cover; margin-bottom: 1.15rem; }
+.frente-foto > img { grid-column: 1 / -1; width: 100%; height: auto; aspect-ratio: 1.68; object-fit: cover; margin-bottom: 1.15rem; }
 .frente-foto .icone { width: 1.12rem; height: 1.12rem; margin-top: .47rem; color: var(--argila); }
 .texto-frente p { max-width: 54ch; }
 .catalogo-inicio { background: var(--tinta); color: #fff8ea; }
@@ -46,12 +46,18 @@
 .links-catalogo .icone { width: 1.1rem; height: 1.1rem; }
 .metodo { background: var(--papel); border: none; }
 .metodo-titulo { padding-right: 0; }
+.contexto-metodo { margin-top: 1.1rem; color: var(--texto); }
 .metodo-caderno { position: static; width: min(93%,23rem); max-width: none; margin: 1.35rem 0 0; transform: none; }
-.contato { background: #392f38; }
+.contato { background: #392f38; padding-block: clamp(2.9rem,5.2vw,6rem); }
+.convite-campo { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2.2rem,8vw,9rem); align-items: center; }
+.convite-campo h2 { margin: 0; font-size: clamp(3rem,5.4vw,5.5rem); }
+.convite-campo p { max-width: 44ch; color: #f2e8da; }
+.convite-email { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; margin-top: .85rem; font-weight: 675; text-decoration-color: #d2ad90; }
+.convite-email .icone { width: 1rem; }
 @media (min-width: 761px) and (max-width: 1050px) {
   .capa-conteudo { grid-template-columns: 1.45fr 1fr; gap: 1.6rem; }
   .capa h1 { font-size: 5.1vw; }
-  .panorama, .dupla-frentes, .abertura-atuacao, .faixa-catalogo { grid-template-columns: 1.08fr 1fr; gap: 1.65rem; }
+  .panorama, .abertura-atuacao, .faixa-catalogo { grid-template-columns: 1.08fr 1fr; gap: 1.65rem; }
   .frente-amostra { grid-template-columns: minmax(4.2rem,.55fr) minmax(0,1.45fr); gap: .85rem; }
   .frente-amostra .icone { display: none; }
   .frente-amostra h3 { font-size: 1.7rem; }
@@ -61,9 +67,11 @@
   .capa::after { background: linear-gradient(0deg,#151810f5 0%,#1c1e15a1 51%,#1718101f 83%,transparent); }
   .capa-conteudo { display: block; padding-block: 6.5rem 2.4rem; }
   .capa h1 { font-size: clamp(1.7rem,8.35vw,3.95rem); }
+  .area-da-marca { margin-bottom: .7rem; }
   .capa .abertura { margin-top: 1rem; max-width: 40ch; font-size: 1rem; }
   .capa .acoes { margin-top: 1.25rem; }
-  .abertura-atuacao { grid-template-columns: 1fr; gap: .8rem; }
+  .abertura-atuacao { grid-template-columns: 1fr; gap: .2rem; }
+  .download-servicos { justify-self: start; }
   .panorama, .faixa-catalogo { grid-template-columns: 1fr; gap: 1.45rem; }
   .frente-campo { min-height: clamp(18.8rem,60vw,25rem); padding: 1.35rem; }
   .chamada-campo p { font-size: .9rem; }
@@ -71,17 +79,18 @@
   .frente-amostra img { max-height: 9rem; aspect-ratio: 1.16; }
   .frente-amostra h3, .texto-frente h3 { font-size: clamp(1.5rem,4.7vw,2rem); }
   .dupla-frentes { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.4rem; }
-  .frente-foto > img { height: clamp(10rem,28vw,14rem); margin-bottom: .9rem; }
+  .frente-foto > img { margin-bottom: .9rem; }
   .faixa-catalogo { gap: 1.45rem; }
   .abertura-catalogo { grid-template-columns: minmax(4.8rem,.33fr) 1fr; gap: 1.15rem; }
   .abertura-catalogo img { max-height: 8.5rem; }
   .abertura-catalogo h2 { font-size: clamp(2rem,6.4vw,3rem); }
   .abertura-catalogo p { margin-top: .6rem; font-size: .94rem; }
   .metodo-caderno { max-width: 18rem; width: 74vw; }
+  .convite-campo { grid-template-columns: 1fr; gap: 1.1rem; }
 }
 @media (max-width: 540px) {
   .dupla-frentes { grid-template-columns: 1fr; gap: 1.75rem; }
-  .frente-foto > img { aspect-ratio: 1.95; height: auto; }
+  .frente-foto > img { aspect-ratio: 1.67; }
   .frente-amostra { grid-template-columns: clamp(4.7rem,22vw,7.25rem) minmax(0,1fr) auto; }
   .frente-amostra p { font-size: .88rem; }
 }
@@ -95,3 +104,4 @@
   .frente-campo img, .frente-campo::after, .frente-amostra img, .frente-foto img, .panorama .icone, .dupla-frentes .icone { display: none; }
   .frente-campo p, .catalogo-inicio, .faixa-catalogo p { color: black; background: white; }
 }
+.ancora-legada { position: absolute; top: 0; }

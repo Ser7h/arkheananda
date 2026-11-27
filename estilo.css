@@ -49,7 +49,7 @@ h3 { letter-spacing: -.042em; }
 .marca img { width: clamp(11rem, 15.5vw, 15rem); }
 .navegacao { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 3.5rem); }
 .navegacao a, .abrir-menu { display: inline-flex; min-height: 44px; align-items: center; font-weight: 670; font-size: .88rem; text-decoration: none; }
-.navegacao a:not(.contato-nav):hover, .rodape-acoes a:hover { text-decoration: underline; }
+.navegacao a:not(.contato-nav):hover { text-decoration: underline; }
 .navegacao .contato-nav { gap: 1.3rem; border: 1px solid var(--tinta); padding: .45rem 1.2rem; border-radius: 2px; }
 .contato-nav:hover { background: var(--tinta); color: var(--palha); }
 .abrir-menu { display: none; }
@@ -113,15 +113,41 @@ details li::marker { color: var(--argila); }
 .contato-conteudo > p:not(.rubrica) { max-width: 44ch; color: #f1e8db; font-size: 1.03rem; }
 .email { display: inline-flex; max-width: 100%; align-items: center; gap: .8em; margin-top: 1.45rem; padding-block: .32em; min-height: 44px; border-bottom: 1px solid #cfb79d; font-size: clamp(1.05rem, 1.65vw, 1.65rem); font-weight: 600; text-decoration: none; letter-spacing: -.025em; }
 .email:hover { color: var(--fibra); }
-footer { padding-block: clamp(2rem, 3.6vw, 3.8rem) 1.5rem; }
-.rodape { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.rodape-marca img { width: 11.8rem; }
-.rodape-marca p, .credito { font-size: .76rem; color: var(--texto); }
-.rodape-marca p { margin-top: .6rem; }
-.rodape-acoes { display: flex; flex-wrap: wrap; gap: .5rem clamp(1.5rem, 3.2vw, 3.5rem); }
-.rodape-acoes a { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; font-size: .85rem; font-weight: 650; text-decoration: none; }
-.rodape-acoes a span { font-weight: 500; font-size: .71rem; color: var(--texto); }
-.credito { margin-top: 1.75rem; padding-top: .95rem; border-top: 1px solid var(--linha); }
+.rodape-institucional {
+  padding-block: clamp(2rem, 4vw, 4rem);
+  color: var(--tinta);
+  background: var(--papel);
+  border-top: 1px solid var(--linha);
+}
+.rodape-institucional-grade {
+  display: grid;
+  grid-template-columns: minmax(14.5rem, 1fr) auto auto;
+  align-items: center;
+  gap: 1.25rem clamp(2rem, 4.5vw, 5.5rem);
+}
+.assinatura-rodape {
+  display: grid;
+  width: fit-content;
+  gap: .75rem;
+  text-decoration: none;
+}
+.assinatura-rodape img { width: clamp(11rem, 15.5vw, 14rem); }
+.assinatura-rodape span { max-width: 28ch; font-size: .84rem; color: var(--texto); line-height: 1.45; }
+.links-rodape { display: flex; flex-wrap: wrap; gap: 0 clamp(1.15rem, 2.35vw, 2.4rem); }
+.links-rodape a, .canal-rodape { display: inline-flex; align-items: center; min-height: 44px; font-size: .91rem; font-weight: 650; }
+.links-rodape a { text-decoration: none; }
+.links-rodape a:hover, .assinatura-rodape:hover span { text-decoration: underline; text-underline-offset: .3em; }
+.canal-rodape { justify-self: start; text-decoration-color: #b1836a; text-underline-offset: .34em; }
+.canal-rodape:hover { color: var(--argila); text-decoration-color: currentColor; }
+@media (max-width: 900px) {
+  .rodape-institucional-grade { grid-template-columns: minmax(13rem,1fr) auto; gap: .15rem 2rem; }
+  .assinatura-rodape { grid-row: span 2; }
+}
+@media (max-width: 580px) {
+  .rodape-institucional-grade { grid-template-columns: 1fr; gap: .15rem; }
+  .assinatura-rodape { grid-row: auto; margin-bottom: .75rem; }
+  .assinatura-rodape span { max-width: none; }
+}
 @media (max-width: 800px) {
   .abertura-secao { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .grade-metodo { gap: 2.4rem; }
@@ -153,8 +179,6 @@ footer { padding-block: clamp(2rem, 3.6vw, 3.8rem) 1.5rem; }
   .metodo h2 { font-size: clamp(2.55rem, 7vw, 3.4rem); }
   .metodo-caderno { width: min(75vw, 18rem); margin-top: 1.2rem; }
   .contato::after { right: -42%; width: 87%; opacity: .14; }
-  .rodape { flex-wrap: wrap; gap: 1.1rem; }
-  .rodape-acoes { column-gap: 1.6rem; }
 }
 @media (max-width: 600px) {
   .capa { align-items: end; min-height: clamp(31rem, 122vw, 36rem); }
@@ -169,7 +193,6 @@ footer { padding-block: clamp(2rem, 3.6vw, 3.8rem) 1.5rem; }
   .botao, .link-capa { font-size: .83rem; }
   .botao { gap: .57rem; padding-inline: .85rem; }
   .link-capa { gap: .25rem; }
-  .rodape-acoes { gap: .25rem 1.15rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -177,7 +200,7 @@ footer { padding-block: clamp(2rem, 3.6vw, 3.8rem) 1.5rem; }
 }
 @media print {
   .cabecalho { position: static; }
-  .navegacao, .abrir-menu, .acoes, .rodape-acoes, .pular { display: none !important; }
+  .navegacao, .abrir-menu, .acoes, .links-rodape, .pular { display: none !important; }
   .capa, .contato { color: var(--tinta); background: white; }
   .capa { min-height: 0; }
   .capa-imagem, .capa::after, .contato::after { display: none; }

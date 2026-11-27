@@ -1,9 +1,4 @@
 .catalogo { --linha-catalogo: #cbbfab; }
-.catalogo-barra { display: flex; align-items: center; justify-content: space-between; min-height: 4.7rem; gap: 1.25rem; }
-.catalogo-barra nav { display: flex; align-items: center; gap: 1.6rem; }
-.catalogo-barra nav a, .indice-voltar, .catalogo-rodape a:not(.marca) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: .85rem; font-weight: 690; }
-.catalogo-barra nav a:hover, .indice-voltar:hover, .catalogo-rodape a:hover { text-decoration: underline; }
-.pdf-nav { border: 1px solid currentColor; border-radius: 2px; padding-inline: .9rem; gap: .7rem; }
 .cabeca-catalogo { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(12rem, .75fr); gap: 2.2rem; align-items: center; padding-block: clamp(3rem, 5.5vw, 6rem); }
 .cabeca-catalogo h1 { font-size: clamp(3.1rem, 6.8vw, 7rem); line-height: 1; margin: .23em 0; }
 .lead-catalogo { max-width: 43ch; font-size: clamp(1.08rem, 1.7vw, 1.48rem); color: var(--texto); }
@@ -13,9 +8,13 @@
 .sumario-grade { padding-block: clamp(2.4rem, 4.2vw, 5rem); align-items: start; }
 .sumario-intro h2 { font-size: clamp(2.3rem, 3.6vw, 3.7rem); }
 .sumario-intro p { margin-top: 1rem; max-width: 38ch; color: #ece1d5; }
-.sumario nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 1.7rem; }
+.sumario nav { display: grid; grid-template-columns: 1.12fr 1fr; gap: 1.75rem; }
+.grupo-indice { min-width: 0; }
+.grupo-indice h3 { margin: 0 0 .65rem; font: 650 .88rem/1.35 var(--sans); color: #e3cba9; letter-spacing: .025em; }
 .sumario nav a { display: flex; align-items: center; justify-content: space-between; gap: .7rem; padding: .85rem 0; min-height: 3.4rem; border-top: 1px solid #8e7d86; font-size: .92rem; font-weight: 600; line-height: 1.35; text-decoration: none; }
-.falar { display: inline-flex; align-items: center; min-height: 44px; margin-top: .55rem; font-size: .91rem; font-weight: 690; }
+.falar, .consulta-area { display: inline-flex; width: fit-content; align-items: center; gap: .6rem; min-height: 44px; margin-top: .55rem; font-size: .93rem; font-weight: 690; text-decoration-thickness: 1px; }
+.consulta-area { color: #803723; }
+.consulta-area:hover { color: var(--tinta); }
 .sumario a:hover { color: var(--fibra); }
 .sumario a:focus-visible { outline-color: var(--fibra); }
 .folio { border-bottom: 1px solid var(--linha-catalogo); }
@@ -23,46 +22,29 @@
 .folio .folio-titulo { align-self: start; position: sticky; top: 6.6rem; }
 .folio h2 { font-size: clamp(2.2rem, 3.5vw, 3.8rem); margin: .32em 0; max-width: 17ch; }
 .alvo { max-width: 35ch; color: var(--texto); }
-.indice-voltar { color: #7c3527; gap: .4rem; margin-top: .8rem; }
 .entradas { min-width: 0; }
 .pergunta { max-width: 37ch; margin-bottom: 1.2rem; font: 465 clamp(1.58rem, 2.4vw, 2.55rem)/1.16 var(--serif); letter-spacing: -.035em; }
 .entrada { border-top: 1px solid var(--linha-catalogo); padding-block: 1.2rem 1.5rem; }
 .entrada:last-child { padding-bottom: 0; }
 .entrada h3 { margin-bottom: .32rem; font-size: clamp(1.55rem, 2vw, 2.1rem); line-height: 1.15; }
 .entrada > p { max-width: 64ch; color: var(--texto); }
-.entrada .entrega { margin-top: .55rem; }
-.entrega strong { display: block; color: var(--tinta); font-size: .85em; font-weight: 750; }
 .produtos { background: #f1eadf; }
 .produtos .pergunta { font: 550 clamp(1.05rem, 1.35vw, 1.25rem)/1.55 var(--sans); letter-spacing: 0; max-width: 53ch; }
 .entrada .estagio { margin-bottom: .4rem; font-size: .72rem; line-height: 1.4; color: #843b2a; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
-.contato-final { margin: 1.25rem 0 0; padding: 1.05rem 1.3rem; border-left: 2px solid var(--argila); background: #fbf7ee; }
-.contato-final a { font-weight: 690; overflow-wrap: anywhere; }
-.catalogo-rodape .limite { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 2rem; }
-.catalogo-rodape .marca { margin-right: auto; }
-.catalogo-rodape .marca img { width: 10rem; }
-.catalogo-rodape p { font-size: .85rem; }
+.contato-final { margin: 1.25rem 0 0; }
+.contato-final a { display: inline-flex; align-items: center; min-height: 44px; gap: .5rem; padding-block: .4rem; font-weight: 690; color: #803723; text-underline-offset: .3em; }
 .marca-impressa, .dados-impressos { display: none; }
 @media (max-width: 900px) {
   .sumario-grade, .folio-grade { gap: 2.2rem; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); }
-  .sumario nav { grid-template-columns: 1fr; }
+  .sumario-grade { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .catalogo-barra { min-height: 4rem; flex-wrap: wrap; gap: .25rem .65rem; padding-block: .25rem; }
-  .catalogo-barra nav { gap: .6rem; }
-  .catalogo-barra .marca img { width: 9.1rem; }
-  .catalogo-barra nav a { font-size: .8rem; }
-  .pdf-nav { padding-inline: .5rem; }
   .cabeca-catalogo { grid-template-columns: 1fr; gap: 1rem; }
   .capa-caderno { width: min(78vw, 20rem); justify-self: center; margin-top: .5rem; }
   .sumario-grade, .folio-grade { grid-template-columns: 1fr; gap: 1.25rem; }
   .folio .folio-titulo { position: static; }
+  .sumario nav { grid-template-columns: 1fr; gap: 1.5rem; }
   .folio h2 { max-width: none; }
-  .indice-voltar { margin-top: .16rem; }
-}
-@media (max-width: 460px) {
-  .catalogo-barra nav a[href="#produtos"] { display: none; }
-  .catalogo-barra { gap: .28rem; }
-  .catalogo-rodape .limite { align-items: start; flex-direction: column; gap: .1rem; }
 }
 .escolha-catalogo { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1.2rem; margin-top: 1.4rem; }
 .escolha-catalogo a, .outra-familia { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; font-size: .88rem; font-weight: 695; }
@@ -73,13 +55,15 @@
 @media screen {
   .sumario nav a { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; padding: .6rem 0; }
   .sumario nav a:hover .icone { transform: translateX(2px); }
+  .cabeca-catalogo { padding-block: clamp(2.2rem, 4.65vw, 5.25rem); }
+  .entrada > p { line-height: 1.65; }
+  .servico .entrada { padding-block: clamp(1.05rem, 1.7vw, 1.65rem); }
+  .servico .entrada h3 { margin-bottom: .48rem; }
   .folio.servico:nth-of-type(even) { background: #f3eee4; }
   .servico .folio-titulo { display: flex; flex-direction: column; align-items: flex-start; }
   .foto-servico { order: 1; width: 100%; aspect-ratio: 1.65; margin-block: 1rem 1.2rem; background: #d8cebc; }
-  .servico .alvo, .servico .indice-voltar { order: 2; }
+  .servico .alvo, .servico .consulta-area { order: 2; }
   .servico .folio-titulo h2 { margin-bottom: 0; }
-  .servico .entrega { margin-top: .75rem; padding-left: .85rem; border-left: 2px solid var(--fibra); }
-  .servico .entrega strong { color: #743a2c; }
   .folio.produtos { border-bottom: 0; background: var(--papel); }
   .produtos .folio-grade { display: block; width: 100%; max-width: none; padding: 0; }
   .produtos .folio-titulo { position: static; display: grid; grid-template-columns: minmax(0,.87fr) minmax(0,1.13fr); background: #28372e; color: #fcf6e8; }
@@ -100,8 +84,6 @@
   .linha-produto h3 { font-size: clamp(1.65rem, 2.2vw, 2.35rem); }
   .linha-produto .estagio { margin-bottom: .75rem; font-size: .7rem; font-weight: 750; line-height: 1.4; }
   .contato-final { grid-column: 1/-1; width: fit-content; margin-top: .7rem; }
-  .catalogo-rodape { border-top: 1px solid var(--linha-catalogo); }
-  .catalogo-rodape .creditos-fotos { flex-basis: 100%; order: 1; font-size: .76rem; }
 }
 @media screen and (max-width: 1150px) {
   .produtos .entradas { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -131,11 +113,10 @@
 @media print {
   html, body.catalogo { color: black; background: white; font-size: 10pt; }
   .catalogo .cabecalho { display: block; position: static; border: 0; background: white; }
+  .catalogo .barra, .catalogo .marca { display: block; min-height: 0; }
+  .catalogo .barra .marca img { width: 48mm; filter: grayscale(1); }
   .catalogo .limite { width: 100%; max-width: none; margin-inline: 0; }
-  .catalogo-barra { display: block; min-height: 0; }
-  .catalogo-barra .marca { min-height: 0; display: block; }
-  .catalogo-barra .marca img { width: 48mm; }
-  .catalogo-barra nav, .catalogo .pular, .indice-voltar, .catalogo-rodape, .sumario .falar,
+  .catalogo .pular, .rodape-institucional, .consulta-area, .sumario .falar,
   .escolha-catalogo, .outra-familia, .foto-indice { display: none; }
   .catalogo h1, .catalogo h2, .catalogo h3, .catalogo a, .catalogo p, .catalogo .rubrica, .catalogo .estagio, .catalogo strong { color: #191919; }
   .rubrica::before { background: #424242; }
@@ -148,6 +129,7 @@
   .sumario-intro h2 { font-size: 20pt; }
   .sumario-intro p { margin-top: 2mm; max-width: 100%; }
   .sumario nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 7mm; margin-top: 5mm; }
+  .sumario .grupo-indice h3 { color: black; font-size: 10pt; }
   .sumario nav a { min-height: 11mm; font-size: 11pt; padding: 2mm 0; }
   .dados-impressos { display: block; margin-top: 10mm; font-size: 9.3pt; }
   .dados-impressos a { text-decoration: none; }
@@ -159,7 +141,6 @@
   .prancha-produto figcaption { margin-top: 1mm; font: 7.5pt/1.2 var(--sans); color: #444; }
   .marca-impressa { display: flex; align-items: center; justify-content: space-between; padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1px solid #777; }
   .marca-impressa img { width: 35mm; filter: grayscale(1); }
-  .catalogo-barra .marca img { filter: grayscale(1); }
   .marca-impressa span { font: 550 8.5pt/1.2 var(--sans); }
   .folio .rubrica { font-size: 8pt; }
   .folio h2 { max-width: 100%; margin: 1.5mm 0; font-size: 25pt; }
@@ -168,7 +149,7 @@
   .entrada { padding-block: 4.1mm; break-inside: avoid; }
   .entrada h3 { font-size: 16.5pt; margin: 0 0 1mm; }
   .entrada > p { max-width: none; font-size: 11.2pt; line-height: 1.42; }
-  .entrada .entrega { margin-top: 1.2mm; }
   .entrada .estagio { margin-bottom: 1.3mm; font-size: 8pt; }
-  .contato-final { break-inside: avoid; margin-top: 5mm; padding: 2mm 3mm; border-color: #444; }
+  .contato-final { display: none; }
+  #insumos .dados-impressos { margin-top: 5mm; }
 }

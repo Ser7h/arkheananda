@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f5ee">
   <title>Portfólio de serviços e produtos | ArkheAnanda</title>
-  <meta name="description" content="Conheça as propostas da ArkheAnanda para resíduos, solos, produção agrícola, viveiros, paisagismo, restauração e desenvolvimento de insumos.">
+  <meta name="description" content="Explore estudos de destinação de resíduos, planos de manejo do solo, projetos de plantio e restauração e linhas de produtos para viveiros e lavouras.">
   <link rel="canonical" href="https://arkheananda.com.br/portfolio.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="ArkheAnanda">
   <meta property="og:title" content="Portfólio de serviços e produtos | ArkheAnanda">
   <meta property="og:description" content="Projetos para o campo, a agroindústria, os viveiros e a recuperação de áreas.">
   <meta property="og:url" content="https://arkheananda.com.br/portfolio.html">
@@ -21,16 +22,21 @@
   <link rel="preload" href="assets/fontes/source-serif-4.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="portfolio.css">
+  <script src="navegacao.js" defer></script>
 </head>
 <body class="catalogo">
   <a class="pular" href="#principal">Pular para o conteúdo</a>
   <header class="cabecalho">
-    <div class="limite catalogo-barra">
+    <div class="limite barra">
       <a class="marca" href="./" aria-label="Página inicial da ArkheAnanda"><img src="assets/marca.svg" width="597" height="85" alt="ArkheAnanda"></a>
-      <nav aria-label="Navegação do portfólio">
-        <a href="#indice">Índice</a>
+      <button type="button" class="abrir-menu" aria-controls="navegacao" aria-expanded="false" hidden>
+        <span>Menu</span><span class="tracos" aria-hidden="true"></span>
+      </button>
+      <nav id="navegacao" class="navegacao" aria-label="Navegação do portfólio">
+        <a href="./">Início</a>
+        <a href="#indice">Áreas de atuação</a>
         <a href="#produtos">Produtos</a>
-        <a class="pdf-nav" href="portfolio-arkheananda.pdf" download>Baixar PDF <span aria-hidden="true">↓</span></a>
+        <a class="contato-nav" href="#contato">Contato <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -38,12 +44,12 @@
     <div class="folha-capa">
       <div class="limite cabeca-catalogo">
         <div>
-          <p class="rubrica">Portfólio comercial</p>
+          <p class="rubrica">Portfólio ArkheAnanda</p>
           <h1>Serviços e produtos</h1>
-          <p class="lead-catalogo">Encontre a frente que atende à sua demanda, do destino de resíduos de uma agroindústria à implantação de um sistema agroflorestal.</p>
+          <p class="lead-catalogo">Compare caminhos para um resíduo, planeje o manejo de um talhão ou desenhe um novo plantio. Conheça os serviços e as linhas de produtos para viveiros e lavouras.</p>
           <nav class="escolha-catalogo" aria-label="Ir direto para">
-            <a href="#residuos">Explorar serviços <span aria-hidden="true">↓</span></a>
-            <a href="#produtos">Ver produtos <span aria-hidden="true">↓</span></a>
+            <a href="#indice">Escolher uma área <span aria-hidden="true">↓</span></a>
+            <a href="mailto:contato@arkheananda.com.br">Falar sobre um projeto <span aria-hidden="true">↗</span></a>
           </nav>
         </div>
         <img class="capa-caderno" src="assets/campo-e-caderno.webp"
@@ -54,18 +60,22 @@
       <div class="sumario" id="indice">
         <div class="limite sumario-grade">
           <div class="sumario-intro">
-            <h2>Consulta por área</h2>
-            <p>O portfólio reúne 20 propostas de serviços e oito linhas de produtos. Cada proposta de execução identifica o responsável, a capacidade e as habilitações aplicáveis ao trabalho.</p>
-            <a class="falar" href="mailto:contato@arkheananda.com.br">Conversar sobre um projeto</a>
+            <h2>Encontre sua área</h2>
+            <p>Escolha um tema para ver o que o trabalho abrange. Se a sua demanda envolve mais de uma área, conte o que pretende fazer.</p>
+            <a class="falar" href="portfolio-arkheananda.pdf" download>Baixar portfólio em PDF <span aria-hidden="true">↓</span></a>
           </div>
-          <nav aria-label="Áreas do portfólio">
+          <nav class="indice-areas" aria-label="Áreas do portfólio">
+            <div class="grupo-indice"><h3>Serviços</h3>
             <a href="#residuos"><img class="foto-indice" src="assets/biomassa-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Resíduos e compostagem</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
             <a href="#solos"><img class="foto-indice" src="assets/perfil-de-solo-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Solos e fertilidade</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
             <a href="#producao"><img class="foto-indice" src="assets/agrofloresta-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Produção agrícola e agroflorestas</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
             <a href="#paisagens"><img class="foto-indice" src="assets/restauracao-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Viveiros, paisagismo e restauração</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
             <a href="#pesquisa"><img class="foto-indice" src="assets/ensaio-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Pesquisa e desenvolvimento</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-            <a href="#produtos"><img class="foto-indice" src="assets/viveiro-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Produtos para viveiros e plantio</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-            <a href="#insumos"><img class="foto-indice" src="assets/materiais-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Fertilizantes e materiais de biochar</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            </div>
+            <div class="grupo-indice"><h3>Produtos</h3>
+            <a href="#produtos"><img class="foto-indice" src="assets/viveiro-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Mudas e substratos</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="#insumos"><img class="foto-indice" src="assets/materiais-600.webp" width="90" height="60" alt="" loading="lazy" decoding="async"><span>Fertilizantes e materiais à base de biochar</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            </div>
           </nav>
         </div>
       </div>
@@ -81,30 +91,26 @@
                width="1200" height="800" loading="lazy" decoding="async" alt="Mãos seguram fibras e cascas misturadas à matéria orgânica.">
           <p class="rubrica">Serviços</p>
           <h2 id="ttl-residuos">Resíduos e compostagem</h2>
-          <p class="alvo">Cooperativas, agroindústrias, sementeiras e empreendimentos que geram resíduos orgânicos.</p>
-          <a class="indice-voltar" href="#indice">Voltar ao índice <span aria-hidden="true">↑</span></a>
+          <p class="alvo">Para cooperativas, sementeiras e agroindústrias que precisam encaminhar lotes ou aproveitar resíduos orgânicos.</p>
+          <a class="consulta-area" href="mailto:contato@arkheananda.com.br?subject=Destina%C3%A7%C3%A3o%20de%20res%C3%ADduos">Avaliar um resíduo <span aria-hidden="true">↗</span></a>
         </header>
         <div class="entradas">
-          <p class="pergunta">Qual destino faz sentido para cada material e quanto custa sustentá-lo?</p>
+          <p class="pergunta">Que destino pode receber o material e a que custo?</p>
           <article class="entrada">
             <h3>Inventário de resíduos e biomassas</h3>
-            <p>Para quem precisa saber o que sobra, em que quantidade e em quais épocas.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Mapa das correntes por origem, volume, sazonalidade e destino atual, com prioridades para investigação.</p>
+            <p>Um levantamento por origem, volume, época do ano e destino atual mostra quais materiais priorizar e quais alternativas vale investigar.</p>
           </article>
           <article class="entrada">
             <h3>Estudo de alternativas de destinação</h3>
-            <p>Para o gerador que precisa escolher entre rotas para um material, inclusive lotes remanescentes de sementes já tratadas.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Quadro comparativo de destinos, logística, custos, condições de recebimento e comprovantes esperados de cada operador.</p>
+            <p>Comparamos destinos, frete, condições de recebimento e comprovantes de cada rota. Para sobras de sementes já tratadas, o estudo considera o tratamento aplicado ao lote.</p>
           </article>
           <article class="entrada">
             <h3>Viabilidade de uma unidade de compostagem</h3>
-            <p>Para a empresa ou cooperativa que avalia processar orgânicos de origem conhecida, como resíduos do beneficiamento de frutas.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Cenários de escala e localização, estimativas de investimento e custeio, requisitos de implantação e decisão sobre avançar para o projeto.</p>
+            <p>Para resíduos orgânicos de origem conhecida, como os do beneficiamento de frutas, comparamos escala, localização, investimento e custo de operação antes da decisão de implantar.</p>
           </article>
           <article class="entrada">
             <h3>Coordenação da destinação e da compostagem</h3>
-            <p>Para quem precisa programar o encaminhamento e acompanhar a movimentação dos lotes.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano de remessas, definição de transportador e receptor e dossiê de comprovantes. A operação física depende do aceite do material e das habilitações dos executores.</p>
+            <p>Organizamos remessas, transportadores, receptores e comprovantes por lote. A movimentação física depende do aceite do material pelo destinador e das habilitações de quem executa a operação.</p>
           </article>
         </div>
       </div>
@@ -119,25 +125,22 @@
                width="1200" height="800" loading="lazy" decoding="async" alt="Raízes de uma gramínea atravessam um perfil de solo avermelhado.">
           <p class="rubrica">Serviços</p>
           <h2 id="ttl-solos">Solos e fertilidade</h2>
-          <p class="alvo">Produtores, cooperativas e equipes de assistência técnica que decidem por talhão e por cultura.</p>
-          <a class="indice-voltar" href="#indice">Voltar ao índice <span aria-hidden="true">↑</span></a>
+          <p class="alvo">Para produtores, cooperativas e equipes técnicas que acompanham a fertilidade e a resposta da lavoura.</p>
+          <a class="consulta-area" href="mailto:contato@arkheananda.com.br?subject=Solos%20e%20fertilidade">Conversar sobre minha área <span aria-hidden="true">↗</span></a>
         </header>
         <div class="entradas">
-          <p class="pergunta">Onde o manejo merece mudar e como acompanhar a resposta da área?</p>
+          <p class="pergunta">Quais talhões precisam de atenção primeiro?</p>
           <article class="entrada">
             <h3>Diagnóstico de solo por talhão</h3>
-            <p>Para quem observa diferenças entre áreas e precisa priorizar a próxima intervenção.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Leitura conjunta do histórico, das análises disponíveis e das observações de campo, com mapa ou quadro de prioridades.</p>
+            <p>Cruzamos o histórico de manejo com análises disponíveis e observações de campo. O diagnóstico indica, em mapa ou quadro, quais áreas precisam de atenção primeiro.</p>
           </article>
           <article class="entrada">
             <h3>Plano de fertilidade e matéria orgânica</h3>
-            <p>Para o produtor que quer avaliar composto, fontes minerais ou outra estratégia de nutrição.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano por cultura e área, com alternativas de manejo, calendário e critérios para ajustar a recomendação ao longo do ciclo.</p>
+            <p>O plano organiza fontes orgânicas e minerais, épocas de aplicação e critérios de ajuste conforme a cultura e as condições de cada talhão.</p>
           </article>
           <article class="entrada">
             <h3>Monitoramento de solo e cultura</h3>
-            <p>Para fazendas que precisam saber se vale a pena manter ou rever uma prática.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Linha de base, calendário de acompanhamento e relatório por ciclo, relacionando indicadores do solo, desempenho da cultura e histórico de manejo.</p>
+            <p>A partir da condição inicial da área, definimos o que observar e quando voltar a medir. O relatório de cada ciclo relaciona o manejo à resposta do solo e da cultura.</p>
           </article>
         </div>
       </div>
@@ -152,30 +155,26 @@
                width="1200" height="800" loading="lazy" decoding="async" alt="Fileiras de cultivo entre bananeiras e árvores de diferentes alturas.">
           <p class="rubrica">Serviços</p>
           <h2 id="ttl-producao">Produção agrícola e agroflorestas</h2>
-          <p class="alvo">Produtores de grãos, frutas e café, cooperativas, sementeiras e gestores de áreas agroflorestais.</p>
-          <a class="indice-voltar" href="#indice">Voltar ao índice <span aria-hidden="true">↑</span></a>
+          <p class="alvo">Para produtores de grãos, frutas e café, sementeiras e gestores de sistemas agroflorestais.</p>
+          <a class="consulta-area" href="mailto:contato@arkheananda.com.br?subject=Produ%C3%A7%C3%A3o%20agr%C3%ADcola%20e%20agroflorestas">Planejar um plantio <span aria-hidden="true">↗</span></a>
         </header>
         <div class="entradas">
-          <p class="pergunta">Como planejar o plantio e acompanhar a implantação nas condições da propriedade?</p>
+          <p class="pergunta">O que plantar em cada área e em qual sequência?</p>
           <article class="entrada">
             <h3>Planejamento e acompanhamento de cultivos</h3>
-            <p>Para quem vai implantar uma nova área ou reorganizar o manejo de uma cultura, como café ou mamão.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano de implantação, calendário de operações, visitas previstas e caderno de acompanhamento das decisões de campo.</p>
+            <p>Para implantar uma área ou rever o manejo de um pomar ou cafezal, organizamos o calendário de operações, as visitas previstas e o registro das decisões de campo.</p>
           </article>
           <article class="entrada">
             <h3>Projeto de sistema agroflorestal</h3>
-            <p>Para propriedades que querem combinar culturas agrícolas e espécies arbóreas na mesma área.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Desenho de talhões e arranjos, seleção de espécies por função, sequência de implantação e previsão de manutenção.</p>
+            <p>O desenho mostra onde combinar culturas agrícolas e árvores, quais espécies cumprem cada função e em que sequência plantar e fazer a manutenção.</p>
           </article>
           <article class="entrada">
             <h3>Rotação de culturas e cobertura do solo</h3>
-            <p>Para quem precisa organizar sucessões e manter a área coberta entre safras.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano de rotação por talhão e janela de cultivo, com critérios de escolha das coberturas e verificação do estabelecimento.</p>
+            <p>O plano distribui as culturas e coberturas entre talhões e safras. Indica as janelas de semeadura e como conferir se a cobertura se estabeleceu.</p>
           </article>
           <article class="entrada">
             <h3>Tratamento de sementes sob consulta</h3>
-            <p>Para produtores e sementeiras que precisam programar o tratamento de um lote para plantio.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Proposta por lote com finalidade, modalidade, executor e registros da operação. A execução depende de escopo técnico e capacidade confirmados.</p>
+            <p>Para lotes destinados ao plantio, definimos finalidade, modalidade de tratamento e registros por lote. A aplicação depende da capacidade e da disponibilidade do executor para a cultura e o volume consultados.</p>
           </article>
         </div>
       </div>
@@ -190,35 +189,30 @@
                width="1200" height="800" loading="lazy" decoding="async" alt="Muda apoiada em tutor de madeira em uma área de revegetação.">
           <p class="rubrica">Serviços</p>
           <h2 id="ttl-paisagens">Viveiros, paisagismo e restauração</h2>
-          <p class="alvo">Viveiristas, paisagistas, proprietários rurais, gestores de áreas verdes e executores de restauração.</p>
-          <a class="indice-voltar" href="#indice">Voltar ao índice <span aria-hidden="true">↑</span></a>
+          <p class="alvo">Para viveiristas, paisagistas e gestores de propriedades e áreas verdes, do preparo das mudas ao replantio.</p>
+          <a class="consulta-area" href="mailto:contato@arkheananda.com.br?subject=Viveiros%20e%20restaura%C3%A7%C3%A3o">Conversar sobre o projeto <span aria-hidden="true">↗</span></a>
         </header>
         <div class="entradas">
-          <p class="pergunta">O que produzir ou plantar, em que época e quem cuida da área depois?</p>
+          <p class="pergunta">Que espécies plantar e como cuidar delas depois?</p>
           <article class="entrada">
             <h3>Planejamento de viveiro e produção sob encomenda</h3>
-            <p>Para quem precisa conciliar demanda por espécie, espaço de viveiro e janela de plantio.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Programa de lotes por espécie e porte, estimativa de quantidades, origem do material e cronograma de entrega proposto.</p>
+            <p>Dimensionamos lotes por espécie e porte, espaço de viveiro e janela de plantio. O programa reúne quantidades estimadas, procedência e previsão de entrega.</p>
           </article>
           <article class="entrada">
             <h3>Projeto paisagístico</h3>
-            <p>Para condomínios, empresas e propriedades que querem implantar ou renovar uma área verde.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano de plantio com distribuição das espécies, quantidades, condições do local e necessidades de manutenção.</p>
+            <p>Para implantar ou renovar jardins e áreas verdes, o plano distribui as espécies conforme luz, espaço e manutenção e indica as quantidades de mudas.</p>
           </article>
           <article class="entrada">
             <h3>Implantação e manutenção de jardins</h3>
-            <p>Para o gestor que já possui um projeto e precisa organizar sua execução e conservação.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Orçamento por área, plano de implantação e calendário de manutenção. Equipe e fornecimento de mudas são definidos na proposta.</p>
+            <p>Com o projeto de plantio em mãos, organizamos o orçamento por área, a sequência de implantação e o calendário de cuidados. A proposta identifica a equipe e o fornecimento de mudas.</p>
           </article>
           <article class="entrada">
             <h3>Plano de revegetação com espécies nativas</h3>
-            <p>Para proprietários e empresas que precisam recuperar a cobertura vegetal de uma área.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Zoneamento dos trechos, seleção de espécies e procedências, previsão de mudas, calendário e critérios de acompanhamento.</p>
+            <p>O plano divide a área em trechos, indica espécies e procedências, estima as mudas necessárias e define o calendário de plantio e acompanhamento.</p>
           </article>
           <article class="entrada">
             <h3>Acompanhamento de plantios e replantio</h3>
-            <p>Para gestores que precisam identificar falhas após a implantação de áreas verdes ou de restauração.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Vistorias programadas, registro de sobrevivência e cobertura por trecho, com prioridades de manutenção e reposição.</p>
+            <p>Nas vistorias, registramos a sobrevivência das mudas e a cobertura por trecho. O registro orienta onde repor plantas e quais cuidados priorizar.</p>
           </article>
         </div>
       </div>
@@ -233,30 +227,26 @@
                width="1200" height="800" loading="lazy" decoding="async" alt="Duas plantas jovens com as raízes expostas são observadas lado a lado.">
           <p class="rubrica">Serviços</p>
           <h2 id="ttl-pesquisa">Pesquisa e desenvolvimento</h2>
-          <p class="alvo">Fabricantes de insumos, cooperativas, viveiros e equipes de pesquisa que precisam decidir se uma tecnologia deve avançar.</p>
-          <a class="indice-voltar" href="#indice">Voltar ao índice <span aria-hidden="true">↑</span></a>
+          <p class="alvo">Para fabricantes de insumos, cooperativas, viveiros e equipes de pesquisa que querem testar um material ou uma prática de manejo.</p>
+          <a class="consulta-area" href="mailto:contato@arkheananda.com.br?subject=Pesquisa%20e%20desenvolvimento">Discutir um ensaio <span aria-hidden="true">↗</span></a>
         </header>
         <div class="entradas">
-          <p class="pergunta">Que evidência justifica levar um material, uma formulação ou uma prática à próxima etapa?</p>
+          <p class="pergunta">Vale a pena levar este material do ensaio ao campo?</p>
           <article class="entrada">
             <h3>Qualificação de matérias-primas</h3>
-            <p>Para quem considera usar uma biomassa, um composto ou um material mineral em novo produto.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Dossiê de origem, variabilidade e dados disponíveis, com plano das verificações necessárias para a decisão de uso.</p>
+            <p>Organizamos os dados de origem, composição e variabilidade de biomassas, compostos e materiais minerais. O estudo aponta o que ainda precisa ser verificado para o uso pretendido.</p>
           </article>
           <article class="entrada">
             <h3>Desenvolvimento de formulações e protótipos</h3>
-            <p>Para fabricantes e parceiros que estudam um substrato, um organomineral ou um material à base de biochar.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Especificação do protótipo, atributos a avaliar e plano de comparação. A proposta define a participação de cada parceiro.</p>
+            <p>Definimos com o parceiro a composição a investigar, os atributos do protótipo e a referência de comparação para substratos, organominerais e materiais à base de biochar.</p>
           </article>
           <article class="entrada">
             <h3>Ensaios comparativos de campo e viveiro</h3>
-            <p>Para quem precisa comparar uma alternativa com o manejo atual antes de ampliar seu uso.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Desenho experimental, comparação de referência e indicadores. Na etapa de execução contratada, caderno de dados e relatório de interpretação.</p>
+            <p>Desenhamos o ensaio para comparar a alternativa com o manejo atual. Quando o projeto inclui a execução, a entrega reúne os dados observados e a interpretação dos resultados.</p>
           </article>
           <article class="entrada">
             <h3>Estruturação de projetos de pesquisa em parceria</h3>
-            <p>Para empresas e equipes científicas que precisam transformar uma pergunta em projeto conjunto.</p>
-            <p class="entrega"><strong>Entrega proposta</strong> Plano de trabalho com escopo, responsabilidades, orçamento, entregas e critérios para decidir a continuidade da pesquisa.</p>
+            <p>Transformamos a pergunta de pesquisa em um plano de trabalho, com responsabilidades, orçamento, entregas e critérios para decidir se o estudo deve continuar.</p>
           </article>
         </div>
       </div>
@@ -269,38 +259,38 @@
             <img src="assets/viveiro.webp" srcset="assets/viveiro-600.webp 600w, assets/viveiro.webp 1200w"
                  sizes="(max-width: 760px) 100vw, 57vw" width="1200" height="800" loading="lazy" decoding="async"
                  alt="Mudas de diferentes portes em linhas de tubetes no viveiro.">
-            <figcaption>Mudas em tubetes · imagem ilustrativa</figcaption>
+            <figcaption>Mudas em tubetes · ilustração</figcaption>
           </figure>
           <div class="texto-produto">
             <p class="rubrica">Linhas de produtos</p>
             <h2 id="ttl-produtos-0">Mudas e substratos</h2>
-            <p class="alvo">O comprador define o plantio, a janela de entrega e o padrão de muda desejado.</p>
+            <p class="alvo">Do plantio de espécies nativas à formação de um pomar, cada área pede uma muda, um substrato e uma época de implantação.</p>
             <a class="outra-familia" href="#insumos">Ver fertilizantes e biochar <span aria-hidden="true">↓</span></a>
           </div>
         </header>
         <div class="entradas">
-          <p class="pergunta nota-produto">As linhas estão em planejamento ou pesquisa. Fornecimento, especificações e prazo dependem de validação e consulta comercial.</p>
+          <p class="pergunta nota-produto">As linhas de mudas estão em planejamento. Para consultar a possibilidade de fornecimento, indique espécie, quantidade, município e época de plantio.</p>
           <article class="entrada linha-produto">
-            <p class="estagio">Linha planejada</p>
+            <p class="estagio">Em planejamento</p>
             <h3>Mudas nativas</h3>
-            <p>Para projetos de revegetação e restauração. A especificação do lote considera espécies adequadas ao local, procedência, porte e janela de plantio.</p>
+            <p>Para revegetação e restauração. A escolha das mudas considera as espécies adequadas ao local, a procedência, o porte e a época de plantio.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Linha planejada</p>
+            <p class="estagio">Em planejamento</p>
             <h3>Mudas ornamentais</h3>
-            <p>Para paisagistas, condomínios e gestores de jardins. A seleção considera porte, exposição, manutenção prevista e quantidade por espécie.</p>
+            <p>Para jardins, condomínios e espaços de uso coletivo. A seleção considera a exposição ao sol, o porte adulto e os cuidados previstos para cada espécie.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Expansão sob demanda</p>
+            <p class="estagio">Fornecimento em estudo</p>
             <h3>Mudas de frutíferas e café</h3>
-            <p>Para produtores que programam a implantação de pomares ou cafezais. A viabilidade depende de demanda regional, cultivar, origem, categoria e viveiro fornecedor.</p>
+            <p>Para implantação de pomares e cafezais. A possibilidade de fornecimento depende da região, da cultivar, da procedência e de um viveiro apto a atender o pedido.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Desenvolvimento proposto</p>
+            <p class="estagio">Proposta de desenvolvimento</p>
             <h3>Substratos para produção de mudas</h3>
-            <p>Para viveiros que precisam avaliar um substrato por espécie, recipiente e fase de produção. O desenvolvimento prevê especificação física e ensaio comparativo.</p>
+            <p>Desenvolvimento em parceria com viveiros para comparar propriedades físicas e resposta das mudas por espécie, recipiente e fase de produção.</p>
           </article>
-
+          <p class="contato-final"><a href="mailto:contato@arkheananda.com.br?subject=Mudas%20e%20substratos">Consultar a linha de mudas e substratos <span aria-hidden="true">↗</span></a></p>
         </div>
       </div>
     </section>
@@ -312,49 +302,48 @@
             <img src="assets/materiais.webp" srcset="assets/materiais-600.webp 600w, assets/materiais.webp 1200w"
                  sizes="(max-width: 760px) 100vw, 57vw" width="1200" height="800" loading="lazy" decoding="async"
                  alt="Amostras de material orgânico fibroso, grânulos e fragmentos porosos de biochar em recipientes separados.">
-            <figcaption>Amostras de materiais · imagem ilustrativa</figcaption>
+            <figcaption>Composto, grânulos e biochar · ilustração</figcaption>
           </figure>
           <div class="texto-produto">
             <p class="rubrica">Linhas de produtos</p>
             <h2 id="ttl-produtos-1">Fertilizantes e materiais à base de biochar</h2>
-            <p class="alvo">A origem das matérias-primas e a aplicação pretendida orientam o desenvolvimento de cada linha.</p>
+            <p class="alvo">Compostos, grânulos e biocarvão são frentes de desenvolvimento para o manejo da fertilidade e a formulação de insumos.</p>
             <a class="outra-familia" href="#produtos">Ver mudas e substratos <span aria-hidden="true">↑</span></a>
           </div>
         </header>
         <div class="entradas">
-          <p class="pergunta nota-produto">Para avaliar um desenvolvimento conjunto, informe o material de origem, a aplicação pretendida e a escala de interesse.</p>
+          <p class="pergunta nota-produto">Estas linhas estão abertas a conversas sobre desenvolvimento e pesquisa. O ponto de partida é a origem do material e o uso que se pretende avaliar.</p>
           <article class="entrada linha-produto">
-            <p class="estagio">Linha planejada</p>
+            <p class="estagio">Em planejamento</p>
             <h3>Composto orgânico para uso agrícola</h3>
-            <p>Para produtores e cooperativas que avaliam fontes de matéria orgânica. A oferta comercial depende de origem conhecida, qualidade do lote e enquadramento para o uso pretendido.</p>
+            <p>Linha voltada ao uso de matéria orgânica no manejo da fertilidade. A oferta depende da origem do material, da qualidade do lote e do enquadramento para o uso agrícola.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Desenvolvimento proposto</p>
+            <p class="estagio">Proposta de desenvolvimento</p>
             <h3>Fertilizante organomineral granulado</h3>
-            <p>Para fabricantes e cooperativas que buscam combinar fontes orgânicas e minerais. O projeto define especificação, garantias pretendidas e validação da formulação.</p>
+            <p>Proposta para fabricantes e cooperativas que estudam combinar fontes orgânicas e minerais. O projeto define a formulação a testar e as características esperadas dos grânulos.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Pesquisa proposta</p>
+            <p class="estagio">Proposta de pesquisa</p>
             <h3>Biochar mineralizado</h3>
-            <p>Para parceiros interessados em avaliar biocarvão associado a fontes minerais em solos e substratos. O desempenho deve ser demonstrado para a aplicação escolhida.</p>
+            <p>Pesquisa proposta sobre a associação do biocarvão a fontes minerais. A avaliação compara o desempenho no solo ou substrato escolhido para o estudo.</p>
           </article>
           <article class="entrada linha-produto">
-            <p class="estagio">Pesquisa proposta</p>
+            <p class="estagio">Proposta de pesquisa</p>
             <h3>Carreador de biochar para insumos biológicos</h3>
-            <p>Para fabricantes que investigam um suporte sólido para seus insumos. A proposta de pesquisa parte da compatibilidade com o produto e dos critérios de estabilidade.</p>
+            <p>Linha de pesquisa proposta sobre o uso do biocarvão como suporte sólido. O estudo parte da compatibilidade com o insumo e da estabilidade necessária para a aplicação.</p>
           </article>
-          <p class="contato-final">Para discutir uma demanda, escreva para <a href="mailto:contato@arkheananda.com.br">contato@arkheananda.com.br</a>.</p>
+          <p class="contato-final"><a href="mailto:contato@arkheananda.com.br?subject=Desenvolvimento%20de%20insumos">Conversar sobre o desenvolvimento de um insumo <span aria-hidden="true">↗</span></a></p>
+          <p class="dados-impressos">Contato para projetos e parcerias · <a href="mailto:contato@arkheananda.com.br">contato@arkheananda.com.br</a></p>
         </div>
       </div>
     </section>
   </main>
-  <footer class="catalogo-rodape">
-    <div class="limite">
-      <a class="marca" href="./"><img src="assets/marca.svg" width="597" height="85" alt="ArkheAnanda"></a>
-      <p>Novembro de 2026</p>
-      <p class="creditos-fotos">Imagens ilustrativas criadas para a ArkheAnanda.</p>
-      <a href="portfolio-arkheananda.pdf" download>Baixar portfólio em PDF</a>
-      <a href="#indice">Voltar ao índice ↑</a>
+  <footer class="rodape-institucional" id="contato" aria-label="Contato e navegação">
+    <div class="limite rodape-institucional-grade">
+      <a class="assinatura-rodape" href="./" aria-label="ArkheAnanda, início"><img src="assets/marca.svg" width="597" height="85" alt="ArkheAnanda"><span>Bioeconomia Circular e Agricultura Regenerativa</span></a>
+      <nav class="links-rodape" aria-label="Navegação do rodapé"><a href="#indice">Serviços</a><a href="#produtos">Produtos</a><a href="apresentacao-arkheananda.pdf" download>Apresentação em PDF</a></nav>
+      <a class="canal-rodape" href="mailto:contato@arkheananda.com.br">contato@arkheananda.com.br</a>
     </div>
   </footer>
 </body>
