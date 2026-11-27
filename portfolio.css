@@ -64,6 +64,65 @@
   .catalogo-barra { gap: .28rem; }
   .catalogo-rodape .limite { align-items: start; flex-direction: column; gap: .1rem; }
 }
+.escolha-catalogo { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1.2rem; margin-top: 1.4rem; }
+.escolha-catalogo a, .outra-familia { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; font-size: .88rem; font-weight: 695; }
+.escolha-catalogo a:first-child { padding: .55rem 1rem; color: var(--papel); background: var(--tinta); text-decoration: none; border-radius: 2px; }
+.escolha-catalogo a:first-child:hover { background: #44384a; }
+.foto-indice, .foto-servico, .prancha-produto img { object-fit: cover; }
+.foto-indice { width: clamp(48px, 4.8vw, 74px); aspect-ratio: 1.5; height: auto; }
+@media screen {
+  .sumario nav a { display: grid; grid-template-columns: auto 1fr auto; gap: .75rem; padding: .6rem 0; }
+  .sumario nav a:hover .icone { transform: translateX(2px); }
+  .folio.servico:nth-of-type(even) { background: #f3eee4; }
+  .servico .folio-titulo { display: flex; flex-direction: column; align-items: flex-start; }
+  .foto-servico { order: 1; width: 100%; aspect-ratio: 1.65; margin-block: 1rem 1.2rem; background: #d8cebc; }
+  .servico .alvo, .servico .indice-voltar { order: 2; }
+  .servico .folio-titulo h2 { margin-bottom: 0; }
+  .servico .entrega { margin-top: .75rem; padding-left: .85rem; border-left: 2px solid var(--fibra); }
+  .servico .entrega strong { color: #743a2c; }
+  .folio.produtos { border-bottom: 0; background: var(--papel); }
+  .produtos .folio-grade { display: block; width: 100%; max-width: none; padding: 0; }
+  .produtos .folio-titulo { position: static; display: grid; grid-template-columns: minmax(0,.87fr) minmax(0,1.13fr); background: #28372e; color: #fcf6e8; }
+  .prancha-produto { position: relative; min-height: 100%; grid-column: 2; grid-row: 1; overflow: hidden; background: #434238; }
+  .prancha-produto img { width: 100%; height: 100%; position: absolute; inset: 0; }
+  .prancha-produto figcaption { position: absolute; bottom: .85rem; right: .9rem; padding: .25rem .58rem; background: #1c231edc; color: #fffaf1; font-size: .72rem; }
+  .texto-produto { grid-column: 1; grid-row: 1; align-self: center; padding: clamp(2.8rem, 5vw, 6rem) clamp(1.8rem, 3.7vw, 4.8rem) clamp(2.8rem, 5vw, 6rem) max(var(--gama), calc((100vw - 84rem) / 2)); }
+  .produtos h2 { max-width: 13ch; margin-block: .31em; font: 435 clamp(3rem, 5.15vw, 5.4rem)/1 var(--serif); letter-spacing: -.055em; }
+  .produtos .rubrica, .produtos .alvo { color: #e8e4ce; }
+  .produtos .alvo { max-width: 35ch; font-size: clamp(1rem, 1.22vw, 1.15rem); }
+  .outra-familia { width: fit-content; margin-top: 1.25rem; color: inherit; text-decoration-thickness: 1px; text-underline-offset: .35em; }
+  .texto-produto a:focus-visible { outline-color: #fff8d8; }
+  #insumos .folio-titulo { background: var(--tinta); }
+  #insumos h2 { max-width: 16ch; font-size: clamp(2.65rem, 4.5vw, 4.65rem); }
+  .produtos .entradas { width: min(calc(100% - 2 * var(--gama)), 84rem); margin: auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem clamp(1.7rem, 3vw, 3.6rem); padding-block: clamp(2rem, 3vw, 3.8rem) clamp(3rem, 5vw, 5.3rem); }
+  .produtos .nota-produto { grid-column: 1/-1; max-width: 69ch; margin: 0 0 .75rem; font-size: 1.02rem; }
+  .linha-produto { padding-top: 1.1rem; border-top: 2px solid #b58f75; }
+  .linha-produto h3 { font-size: clamp(1.65rem, 2.2vw, 2.35rem); }
+  .linha-produto .estagio { margin-bottom: .75rem; font-size: .7rem; font-weight: 750; line-height: 1.4; }
+  .contato-final { grid-column: 1/-1; width: fit-content; margin-top: .7rem; }
+  .catalogo-rodape { border-top: 1px solid var(--linha-catalogo); }
+  .catalogo-rodape .creditos-fotos { flex-basis: 100%; order: 1; font-size: .76rem; }
+}
+@media screen and (max-width: 1150px) {
+  .produtos .entradas { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media screen and (max-width: 760px) {
+  .produtos .folio-titulo { grid-template-columns: 1fr; }
+  .prancha-produto { grid-column: 1; grid-row: 1; min-height: 0; height: clamp(11rem, 49vw, 20rem); }
+  .texto-produto { grid-column: 1; grid-row: 2; padding: 1.65rem var(--gama); }
+  .produtos h2 { max-width: none; font-size: clamp(2.7rem, 8.25vw, 3.8rem); }
+  #insumos h2 { font-size: clamp(2.5rem, 7vw, 3.5rem); }
+  .produtos .alvo { max-width: 48ch; }
+  .produtos .outra-familia { margin-top: .55rem; }
+  .servico .folio-titulo .foto-servico { max-height: 18rem; }
+}
+@media screen and (max-width: 500px) {
+  .produtos .entradas { grid-template-columns: 1fr; gap: .35rem; }
+  .produtos .nota-produto { font-size: .96rem; }
+  .linha-produto { padding-block: 1rem; }
+  .linha-produto h3 { font-size: 1.72rem; }
+  .linha-produto .estagio { margin-bottom: .38rem; }
+}
 @page {
   size: A4;
   margin: 16mm 18mm;
@@ -76,7 +135,8 @@
   .catalogo-barra { display: block; min-height: 0; }
   .catalogo-barra .marca { min-height: 0; display: block; }
   .catalogo-barra .marca img { width: 48mm; }
-  .catalogo-barra nav, .catalogo .pular, .indice-voltar, .catalogo-rodape, .sumario .falar { display: none; }
+  .catalogo-barra nav, .catalogo .pular, .indice-voltar, .catalogo-rodape, .sumario .falar,
+  .escolha-catalogo, .outra-familia, .foto-indice { display: none; }
   .catalogo h1, .catalogo h2, .catalogo h3, .catalogo a, .catalogo p, .catalogo .rubrica, .catalogo .estagio, .catalogo strong { color: #191919; }
   .rubrica::before { background: #424242; }
   .cabeca-catalogo { display: grid; grid-template-columns: 1fr 54mm; gap: 4mm; align-items: center; padding-block: 15mm 10mm; }
@@ -93,7 +153,10 @@
   .dados-impressos a { text-decoration: none; }
   .folio { break-before: page; border: 0; }
   .folio-grade { display: block; padding: 0; }
-  .folio .folio-titulo { position: static; }
+  .folio .folio-titulo { position: static; display: flow-root; }
+  .foto-servico, .prancha-produto { float: right; width: 43mm; margin: 0 0 3mm 5mm; }
+  .foto-servico, .prancha-produto img { width: 43mm; height: 25mm; object-fit: cover; filter: grayscale(1); }
+  .prancha-produto figcaption { margin-top: 1mm; font: 7.5pt/1.2 var(--sans); color: #444; }
   .marca-impressa { display: flex; align-items: center; justify-content: space-between; padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1px solid #777; }
   .marca-impressa img { width: 35mm; filter: grayscale(1); }
   .catalogo-barra .marca img { filter: grayscale(1); }
