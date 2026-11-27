@@ -15,6 +15,8 @@
 .falar, .consulta-area { display: inline-flex; width: fit-content; align-items: center; gap: .6rem; min-height: 44px; margin-top: .55rem; font-size: .93rem; font-weight: 690; text-decoration-thickness: 1px; }
 .consulta-area { color: #803723; }
 .consulta-area:hover { color: var(--tinta); }
+.remissao { display: flex; align-items: center; gap: .45em; width: fit-content; min-height: 44px; font: 650 .9rem/1.4 var(--sans); color: #803723; text-underline-offset: .25em; }
+.remissao:hover { color: var(--tinta); }
 .sumario a:hover { color: var(--fibra); }
 .sumario a:focus-visible { outline-color: var(--fibra); }
 .folio { border-bottom: 1px solid var(--linha-catalogo); }
@@ -117,7 +119,7 @@
   .catalogo .barra .marca img { width: 48mm; filter: grayscale(1); }
   .catalogo .limite { width: 100%; max-width: none; margin-inline: 0; }
   .catalogo .pular, .rodape-institucional, .consulta-area, .sumario .falar,
-  .escolha-catalogo, .outra-familia, .foto-indice { display: none; }
+  .escolha-catalogo, .outra-familia, .remissao, .foto-indice { display: none; }
   .catalogo h1, .catalogo h2, .catalogo h3, .catalogo a, .catalogo p, .catalogo .rubrica, .catalogo .estagio, .catalogo strong { color: #191919; }
   .rubrica::before { background: #424242; }
   .cabeca-catalogo { display: grid; grid-template-columns: 1fr 54mm; gap: 4mm; align-items: center; padding-block: 15mm 10mm; }
