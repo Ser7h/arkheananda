@@ -1,0 +1,111 @@
+.catalogo { --linha-catalogo: #cbbfab; }
+.catalogo-barra { display: flex; align-items: center; justify-content: space-between; min-height: 4.7rem; gap: 1.25rem; }
+.catalogo-barra nav { display: flex; align-items: center; gap: 1.6rem; }
+.catalogo-barra nav a, .indice-voltar, .catalogo-rodape a:not(.marca) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: .85rem; font-weight: 690; }
+.catalogo-barra nav a:hover, .indice-voltar:hover, .catalogo-rodape a:hover { text-decoration: underline; }
+.pdf-nav { border: 1px solid currentColor; border-radius: 2px; padding-inline: .9rem; gap: .7rem; }
+.cabeca-catalogo { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(12rem, .75fr); gap: 2.2rem; align-items: center; padding-block: clamp(3rem, 5.5vw, 6rem); }
+.cabeca-catalogo h1 { font-size: clamp(3.1rem, 6.8vw, 7rem); line-height: 1; margin: .23em 0; }
+.lead-catalogo { max-width: 43ch; font-size: clamp(1.08rem, 1.7vw, 1.48rem); color: var(--texto); }
+.capa-gravura { width: min(100%, 17rem); justify-self: end; max-height: 16rem; object-fit: contain; mix-blend-mode: multiply; }
+.sumario { color: var(--palha); background: var(--tinta); }
+.sumario-grade, .folio-grade { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); column-gap: clamp(2rem, 8vw, 9rem); }
+.sumario-grade { padding-block: clamp(2.4rem, 4.2vw, 5rem); align-items: start; }
+.sumario-intro h2 { font-size: clamp(2.3rem, 3.6vw, 3.7rem); }
+.sumario-intro p { margin-top: 1rem; max-width: 38ch; color: #ece1d5; }
+.sumario nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 1.7rem; }
+.sumario nav a { display: flex; align-items: center; justify-content: space-between; gap: .7rem; padding: .85rem 0; min-height: 3.4rem; border-top: 1px solid #8e7d86; font-size: .92rem; font-weight: 600; line-height: 1.35; text-decoration: none; }
+.falar { display: inline-flex; align-items: center; min-height: 44px; margin-top: .55rem; font-size: .91rem; font-weight: 690; }
+.sumario a:hover { color: var(--fibra); }
+.sumario a:focus-visible { outline-color: var(--fibra); }
+.folio { border-bottom: 1px solid var(--linha-catalogo); }
+.folio-grade { padding-block: clamp(3.15rem, 5.35vw, 5.8rem); }
+.folio .folio-titulo { align-self: start; position: sticky; top: 6.6rem; }
+.folio h2 { font-size: clamp(2.2rem, 3.5vw, 3.8rem); margin: .32em 0; max-width: 17ch; }
+.alvo { max-width: 35ch; color: var(--texto); }
+.indice-voltar { color: #7c3527; gap: .4rem; margin-top: .8rem; }
+.entradas { min-width: 0; }
+.pergunta { max-width: 37ch; margin-bottom: 1.2rem; font: 465 clamp(1.58rem, 2.4vw, 2.55rem)/1.16 var(--serif); letter-spacing: -.035em; }
+.entrada { border-top: 1px solid var(--linha-catalogo); padding-block: 1.2rem 1.5rem; }
+.entrada:last-child { padding-bottom: 0; }
+.entrada h3 { margin-bottom: .32rem; font-size: clamp(1.55rem, 2vw, 2.1rem); line-height: 1.15; }
+.entrada > p { max-width: 64ch; color: var(--texto); }
+.entrada .entrega { margin-top: .55rem; }
+.entrega strong { display: block; color: var(--tinta); font-size: .85em; font-weight: 750; }
+.produtos { background: #f1eadf; }
+.produtos .pergunta { font: 550 clamp(1.05rem, 1.35vw, 1.25rem)/1.55 var(--sans); letter-spacing: 0; max-width: 53ch; }
+.entrada .estagio { margin-bottom: .4rem; font-size: .72rem; line-height: 1.4; color: #843b2a; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+.contato-final { margin: 1.25rem 0 0; padding: 1.05rem 1.3rem; border-left: 2px solid var(--argila); background: #fbf7ee; }
+.contato-final a { font-weight: 690; overflow-wrap: anywhere; }
+.catalogo-rodape .limite { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 2rem; }
+.catalogo-rodape .marca { margin-right: auto; }
+.catalogo-rodape .marca img { width: 10rem; }
+.catalogo-rodape p { font-size: .85rem; }
+.marca-impressa, .dados-impressos { display: none; }
+@media (max-width: 900px) {
+  .sumario-grade, .folio-grade { gap: 2.2rem; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); }
+  .sumario nav { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .catalogo-barra { min-height: 4rem; flex-wrap: wrap; gap: .25rem .65rem; padding-block: .25rem; }
+  .catalogo-barra nav { gap: .6rem; }
+  .catalogo-barra .marca img { width: 9.1rem; }
+  .catalogo-barra nav a { font-size: .8rem; }
+  .pdf-nav { padding-inline: .5rem; }
+  .cabeca-catalogo { grid-template-columns: 1fr; gap: 1rem; }
+  .capa-gravura { display: none; }
+  .sumario-grade, .folio-grade { grid-template-columns: 1fr; gap: 1.25rem; }
+  .folio .folio-titulo { position: static; }
+  .folio h2 { max-width: none; }
+  .indice-voltar { margin-top: .16rem; }
+}
+@media (max-width: 460px) {
+  .catalogo-barra nav a[href="#produtos"] { display: none; }
+  .catalogo-barra { gap: .28rem; }
+  .catalogo-rodape .limite { align-items: start; flex-direction: column; gap: .1rem; }
+}
+@page {
+  size: A4;
+  margin: 16mm 18mm;
+  @bottom-right { content: counter(page) " / " counter(pages); font: 9pt Arial, sans-serif; color: #444; }
+}
+@media print {
+  html, body.catalogo { color: black; background: white; font-size: 10pt; }
+  .catalogo .cabecalho { display: block; position: static; border: 0; background: white; }
+  .catalogo .limite { width: 100%; max-width: none; margin-inline: 0; }
+  .catalogo-barra { display: block; min-height: 0; }
+  .catalogo-barra .marca { min-height: 0; display: block; }
+  .catalogo-barra .marca img { width: 48mm; }
+  .catalogo-barra nav, .catalogo .pular, .indice-voltar, .catalogo-rodape, .sumario .falar { display: none; }
+  .catalogo h1, .catalogo h2, .catalogo h3, .catalogo a, .catalogo p, .catalogo .rubrica, .catalogo .estagio, .catalogo strong { color: #191919; }
+  .rubrica::before { background: #424242; }
+  .cabeca-catalogo { display: grid; grid-template-columns: 1fr 44mm; gap: 4mm; align-items: center; padding-block: 15mm 10mm; }
+  .cabeca-catalogo h1 { font-size: 38pt; }
+  .lead-catalogo { font-size: 12pt; }
+  .capa-gravura { display: block; width: 42mm; filter: grayscale(1); }
+  .sumario, .produtos, .contato-final { color: black; background: white; }
+  .sumario-grade { display: block; padding-block: 5mm 0; border-top: 1px solid #777; }
+  .sumario-intro h2 { font-size: 20pt; }
+  .sumario-intro p { margin-top: 2mm; max-width: 100%; }
+  .sumario nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 7mm; margin-top: 5mm; }
+  .sumario nav a { min-height: 11mm; font-size: 11pt; padding: 2mm 0; }
+  .dados-impressos { display: block; margin-top: 10mm; font-size: 9.3pt; }
+  .dados-impressos a { text-decoration: none; }
+  .folio { break-before: page; border: 0; }
+  .folio-grade { display: block; padding: 0; }
+  .folio .folio-titulo { position: static; }
+  .marca-impressa { display: flex; align-items: center; justify-content: space-between; padding-bottom: 3mm; margin-bottom: 5mm; border-bottom: 1px solid #777; }
+  .marca-impressa img { width: 35mm; filter: grayscale(1); }
+  .catalogo-barra .marca img { filter: grayscale(1); }
+  .marca-impressa span { font: 550 8.5pt/1.2 var(--sans); }
+  .folio .rubrica { font-size: 8pt; }
+  .folio h2 { max-width: 100%; margin: 1.5mm 0; font-size: 25pt; }
+  .alvo { max-width: none; font-size: 10.5pt; }
+  .pergunta, .produtos .pergunta { max-width: 100%; margin-block: 4mm; font: 500 12.5pt/1.3 var(--serif); }
+  .entrada { padding-block: 4.1mm; break-inside: avoid; }
+  .entrada h3 { font-size: 16.5pt; margin: 0 0 1mm; }
+  .entrada > p { max-width: none; font-size: 11.2pt; line-height: 1.42; }
+  .entrada .entrega { margin-top: 1.2mm; }
+  .entrada .estagio { margin-bottom: 1.3mm; font-size: 8pt; }
+  .contato-final { break-inside: avoid; margin-top: 5mm; padding: 2mm 3mm; border-color: #444; }
+}

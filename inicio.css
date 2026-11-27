@@ -1,0 +1,50 @@
+.capa h1 {
+  margin: 0;
+  font-size: clamp(3.1rem, 5.65vw, 6.1rem);
+}
+.capa .abertura { max-width: 48ch; }
+.indice-frentes {
+  display: grid;
+  grid-template-columns: minmax(0, .76fr) minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 8.5rem);
+  align-items: start;
+}
+.indice-abertura > p {
+  max-width: 42ch;
+  margin-top: 1.2rem;
+  line-height: 1.65;
+  color: var(--texto);
+}
+.imagem-perfil {
+  width: 100%;
+  margin-top: 1.75rem;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  object-position: center 52%;
+}
+.indice-lista { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--linha); }
+.indice-lista li { border-top: 1px solid var(--linha); }
+.indice-lista a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(.8rem, 2.2vw, 2rem);
+  align-items: start;
+  padding-block: 1.25rem 1.4rem;
+  text-decoration: none;
+}
+.indice-lista h3 { font-size: clamp(1.66rem, 2.12vw, 2.35rem); line-height: 1.12; }
+.indice-lista p { max-width: 59ch; margin-top: .45rem; font-size: .94rem; line-height: 1.52; color: var(--texto); }
+.indice-lista .icone { width: 1.25rem; height: 1.25rem; margin-top: .35rem; color: var(--argila); }
+.indice-lista a:hover h3, .indice-lista a:focus-visible h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .14em; }
+@media (max-width: 720px) {
+  .capa h1 { font-size: clamp(1.7rem, 8.35vw, 3.75rem); }
+  .indice-frentes { grid-template-columns: 1fr; gap: 1.5rem; }
+  .indice-abertura > p { margin-top: .85rem; }
+  .imagem-perfil { aspect-ratio: 2.3; margin-top: 1.3rem; }
+  .indice-lista a { padding-block: 1.05rem 1.15rem; }
+}
+@media print {
+  .indice-frentes { grid-template-columns: 1fr; gap: .5rem; }
+  .imagem-perfil { display: none; }
+  .indice-lista li { break-inside: avoid; }
+}

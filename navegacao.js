@@ -15,6 +15,7 @@ navegacao.addEventListener("click", (evento) => {
   const link = evento.target.closest("a");
   if (!link) return;
   mostrarMenu(false);
+  if (link.origin !== location.origin || link.pathname !== location.pathname || link.search !== location.search || !link.hash) return;
   const secao = document.getElementById(link.hash.slice(1));
   if (secao) {
     secao.tabIndex = -1;
